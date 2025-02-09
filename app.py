@@ -12,6 +12,10 @@ items = []
 def get_items():
     return jsonify(items)
 
+@app.route("/", methods=["GET"])
+def get_item():
+    return "HELLO"
+
 # GET single item
 @app.route('/api/items/<string:kitu>', methods=['GET'])
 def get_item(kitu):
@@ -34,4 +38,4 @@ def get_item(kitu):
     return res.json()
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
