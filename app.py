@@ -4,14 +4,6 @@ import random
 
 app = Flask(__name__)
 
-# Sample data (in-memory database)
-items = []
-
-# GET all items
-@app.route('/api/items', methods=['GET'])
-def get_items():
-    return jsonify(items)
-
 @app.route("/", methods=["GET"])
 def get_item():
     return "HELLO"
