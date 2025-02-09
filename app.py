@@ -5,7 +5,7 @@ import random
 app = Flask(__name__)
 
 @app.route("/", methods=["GET"])
-def get_item():
+def hello():
     return "HELLO"
 
 # GET single item
